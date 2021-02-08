@@ -1,0 +1,21 @@
+version: "3"
+services:
+  reverse-proxy:
+      image: thuchuyen1295/reverse-proxy
+      ports:
+          - 8080:8080
+      restart: always
+      depends_on:
+        - udagram-user
+        - udagram-feed
+      env_file: ./env/env.development
+  udagram-user:
+    image: thuchuyen1295/udagram-user
+    env_file: ./env/env.development
+  udagram-feed:
+    image: thuchuyen1295/udagram-feed
+    env_file: ./env/env.development
+  udagram-client:
+    image: thuchuyen1295/udagram-client
+    ports:
+      - "8100:80"

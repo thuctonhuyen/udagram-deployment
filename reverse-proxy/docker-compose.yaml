@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverse-proxy:
+      image: thuchuyen1295/reverse-proxy
+      ports:
+          - 8080:8080
+      restart: always
+      depends_on:
+        - udagram-user
+        - udagram-feed
+  udagram-user:
+    image: thuchuyen1295/udagram-user
+  udagram-feed:
+    image: thuchuyen1295/udagram-feed
+  udagram-client:
+    image: thuchuyen1295/udagram-client
+    ports:
+      - "8100:80"
