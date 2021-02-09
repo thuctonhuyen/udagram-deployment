@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t thuchuyen1295/udagram-client .
-  - docker tag thuchuyen1295/udagram-client thuchuyen1295/udagram-client:latest
+  - docker build -t thuchuyen1295/reverse-proxy .
+  - docker tag thuchuyen1295/reverse-proxy thuchuyen1295/reverse-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push thuchuyen1295/udagram-client
+  - docker push thuchuyen1295/reverse-proxy
