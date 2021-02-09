@@ -37,6 +37,11 @@ spec:
             configMapKeyRef:
               name: env-config
               key: AWS_BUCKET
+        - name: AWS_PROFILE
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: AWS_PROFILE
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
             configMapKeyRef:
