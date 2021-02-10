@@ -16,7 +16,7 @@ spec:
         service: reverse-proxy
     spec:
       containers:
-      - image: thuchuyen1295/reverse-proxy
+      - image: thuchuyen1295/reverse-proxy:latest
         name: reverse-proxy
         imagePullPolicy: Always          
         resources:

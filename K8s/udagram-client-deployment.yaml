@@ -17,7 +17,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: thuchuyen1295/udagram-client
+      - image: thuchuyen1295/udagram-client:latest
         name: udagram-client
         imagePullPolicy: Always          
         ports:

@@ -1,0 +1,1 @@
+kubectl autoscale deployment reverse-proxy --cpu-percent=50 --min=1 --max=10

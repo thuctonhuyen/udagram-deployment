@@ -16,7 +16,7 @@ spec:
         service: udagram-user
     spec:
       containers:
-      - image: thuchuyen1295/udagram-user
+      - image: thuchuyen1295/udagram-user:latest
         name: udagram-user
         imagePullPolicy: Always  
         resources:

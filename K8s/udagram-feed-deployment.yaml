@@ -16,7 +16,7 @@ spec:
         service: udagram-feed
     spec:
       containers:
-      - image: thuchuyen1295/udagram-feed
+      - image: thuchuyen1295/udagram-feed:latest
         name: udagram-feed
         imagePullPolicy: Always  
         resources:
